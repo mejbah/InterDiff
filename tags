@@ -1,0 +1,249 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDRESS_MAP_H	addressmap.h	2;"	d
+ADDRINTEq	nova_modules.cpp	/^class ADDRINTEq {$/;"	c	file:
+ALL_BINARIES	makefile	/^ALL_BINARIES = analyzer filter nova_modules.so$/;"	m
+ANALYZER_OBJS	makefile	/^ANALYZER_OBJS = analyzer.o instruction.o atomicsection.o $/;"	m
+ATOMIC_SECTION_H	atomicsection.h	2;"	d
+AccessCountLt	instruction.h	/^class AccessCountLt {$/;"	c
+AddrEq	instruction.h	/^class  AddrEq {$/;"	c
+AddrLt	instruction.h	/^class AddrLt {$/;"	c
+AddressMarker	addressmap.cpp	/^AddressMarker::AddressMarker(addr_type start_addr, addr_type end_addr) {$/;"	f	class:AddressMarker
+AddressMarker	addressmap.h	/^class AddressMarker {$/;"	c
+AddressMarkerVector	addressmap.h	/^typedef vector<AddressMarker *> AddressMarkerVector;$/;"	t
+AddressMarkerVectorHandler	addressmap.h	/^class AddressMarkerVectorHandler {$/;"	c
+AddressTranslator	addressmap.cpp	/^AddressTranslator::AddressTranslator() : _next(INVALID_ADDR + 4),$/;"	f	class:AddressTranslator
+AddressTranslator	addressmap.h	/^class AddressTranslator {$/;"	c
+Allocate	addressmap.cpp	/^void AddressMarkerVectorHandler::Allocate(addr_type addr, size_t size) {$/;"	f	class:AddressMarkerVectorHandler
+AtomicSection	atomicsection.cpp	/^AtomicSection::AtomicSection() : _ins(0), _access_counter(0) {$/;"	f	class:AtomicSection
+AtomicSection	atomicsection.cpp	/^AtomicSection::AtomicSection(pc_type pc, addr_type write_addr, size_t write_len,$/;"	f	class:AtomicSection
+AtomicSection	atomicsection.h	/^class AtomicSection {$/;"	c
+BATCH_SIZE	analyzer.cpp	/^const size_t BATCH_SIZE = 50000;$/;"	v
+BUF_SIZE	analyzer.cpp	/^const int BUF_SIZE = 512;$/;"	v
+BUF_SIZE	filter.cpp	/^const int BUF_SIZE = 512;$/;"	v
+BUF_SIZE	nova_modules.cpp	/^const UINT16 BUF_SIZE = 512;$/;"	v
+CALLOC	nova_modules.cpp	26;"	d	file:
+CXXFLAGS	makefile	/^CXXFLAGS = -I$(PIN_HOME)\/InstLib -fomit-frame-pointer -Wall -Wno-unknown-pragmas $(DBG) $(OPT) -MMD$/;"	m
+Clear	atomicsection.cpp	/^void AtomicSection::Clear() {$/;"	f	class:AtomicSection
+DEBUG_LINE_NO_END	filter.cpp	16;"	d	file:
+DEBUG_LINE_NO_END_1	filter.cpp	20;"	d	file:
+DEBUG_LINE_NO_START	filter.cpp	15;"	d	file:
+DEBUG_LINE_NO_START_1	filter.cpp	19;"	d	file:
+DONT_CARE	instruction.h	/^enum ITER_TYPE {INIT, MIDDLE, END, DONT_CARE};$/;"	e	enum:ITER_TYPE
+END	instruction.h	/^enum ITER_TYPE {INIT, MIDDLE, END, DONT_CARE};$/;"	e	enum:ITER_TYPE
+EOF_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	e	enum:LINE_TYPE
+FILE_NAME_TO_DEBUG	filter.cpp	14;"	d	file:
+FILE_NAME_TO_DEBUG_1	filter.cpp	18;"	d	file:
+FILTER_OBJS	makefile	/^FILTER_OBJS = filter.o instruction.o addressmap.o module_map.o$/;"	m
+FREE	nova_modules.cpp	28;"	d	file:
+FREE_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	e	enum:LINE_TYPE
+Fini	nova_modules.cpp	/^VOID Fini(INT32 code, VOID *v) {$/;"	f
+Free	addressmap.cpp	/^void AddressMarkerVectorHandler::Free(addr_type addr, access_count_type access_counter) {$/;"	f	class:AddressMarkerVectorHandler
+GetName	module_map.cpp	/^string * ModuleInfo::GetName(void) {$/;"	f	class:ModuleInfo
+GetNextLine	analyzer.cpp	/^LINE_TYPE GetNextLine(AtomicSection** atomic_section, int* eof_reached,$/;"	f
+GetTranslated	module_map.cpp	/^long long ModuleInfo::GetTranslated(long long old_address) {$/;"	f	class:ModuleInfo
+GetTranslated	module_map.cpp	/^long long ModuleTranslator::GetTranslated(long long old_address) {$/;"	f	class:ModuleTranslator
+HashAddressSet	atomicsection.h	/^typedef hash_set<addr_type, hash<addr_type>, AddrEq> HashAddressSet;$/;"	t
+INFINITY	instruction.h	/^const access_count_type INFINITY = ~0;$/;"	v
+INIT	instruction.h	/^enum ITER_TYPE {INIT, MIDDLE, END, DONT_CARE};$/;"	e	enum:ITER_TYPE
+INSTRUCTION_H	instruction.h	2;"	d
+INVALID_ADDR	instruction.h	/^static const addr_type INVALID_ADDR = 0;$/;"	v
+ITER_TYPE	instruction.h	/^enum ITER_TYPE {INIT, MIDDLE, END, DONT_CARE};$/;"	g
+Image	nova_modules.cpp	/^VOID Image(IMG img, VOID *v) {$/;"	f
+ImageLoad	nova_modules.cpp	/^VOID ImageLoad(IMG img, VOID *v) {$/;"	f
+ImageUnload	nova_modules.cpp	/^VOID ImageUnload(IMG img, VOID *v) {$/;"	f
+Initialize	nova_modules.cpp	/^VOID Initialize() {$/;"	f
+InsertLifeRange	addressmap.cpp	/^void AddressMarker::InsertLifeRange(access_count_type access_counter) {$/;"	f	class:AddressMarker
+InsertModule	module_map.cpp	/^void ModuleTranslator::InsertModule(long long base, long long upper_address, string *name) {$/;"	f	class:ModuleTranslator
+InsertRange	addressmap.cpp	/^void AddressMarkerVectorHandler::InsertRange(addr_type s, addr_type e) {$/;"	f	class:AddressMarkerVectorHandler
+IsFinished	analyzer.cpp	/^bool IsFinished(int* eof_reached) {$/;"	f
+IsPresent	addressmap.cpp	/^bool AddressMarkerVectorHandler::IsPresent(addr_type address, addr_type &translated_addr,$/;"	f	class:AddressMarkerVectorHandler
+LINE_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	g
+LINKER	makefile	/^LINKER =${CXX}$/;"	m
+LINK_PTHREAD	makefile	/^LINK_PTHREAD=-lpthread$/;"	m
+LOCK	nova_modules.cpp	29;"	d	file:
+LOCK_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	e	enum:LINE_TYPE
+LifeRange	addressmap.h	/^typedef pair<access_count_type, addr_type> LifeRange;$/;"	t
+LifeRangeVector	addressmap.h	/^typedef vector<LifeRange *> LifeRangeVector;$/;"	t
+LongLongLt	module_map.h	/^class LongLongLt {$/;"	c
+MALLOC	nova_modules.cpp	25;"	d	file:
+MAX_LENGHT	read_symbols.h	28;"	d
+MAX_MODULES	nova_modules.cpp	/^const UINT16 MAX_MODULES = 32;$/;"	v
+MAX_NAME_VARIABLE	read_symbols.h	30;"	d
+MAX_VARIABLES	read_symbols.h	29;"	d
+MEM_ACCESS_STAT	nova_modules.cpp	/^typedef UINT32 MEM_ACCESS_STAT;$/;"	t	file:
+MIDDLE	instruction.h	/^enum ITER_TYPE {INIT, MIDDLE, END, DONT_CARE};$/;"	e	enum:ITER_TYPE
+MODULES_H	modules.h	2;"	d
+MODULE_MAP_H	module_map.h	2;"	d
+MemInsAfter	nova_modules.cpp	/^VOID MemInsAfter(UINT32 thread_id, ADDRINT inst_ptr\/*, UINT32 mod, ADDRINT rva*\/) {$/;"	f
+MemInsBefore	nova_modules.cpp	/^VOID MemInsBefore(BOOL _is_write, BOOL _is_read, BOOL _has_read2,$/;"	f
+MetaData	meta_data.h	/^}MetaData;$/;"	t	typeref:struct:meta_data
+Module	modules.cpp	/^Module::Module(const string &name, ADDRINT base, ADDRINT upper_address, $/;"	f	class:Module
+Module	modules.h	/^class Module {$/;"	c
+ModuleInfo	module_map.cpp	/^ModuleInfo::ModuleInfo(long long old_base, long long old_upper_address, string & name) : _old_base(old_base),$/;"	f	class:ModuleInfo
+ModuleInfo	module_map.h	/^class ModuleInfo {$/;"	c
+ModuleMapByBase	module_map.h	/^typedef map<const long long, ModuleInfo*, LongLongLt> ModuleMapByBase;$/;"	t
+ModuleMapByName	module_map.h	/^typedef hash_map<string*, ModuleInfo*, StringHash, StringEq> ModuleMapByName;$/;"	t
+ModuleTranslator	module_map.h	/^class ModuleTranslator {$/;"	c
+NORMAL_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	e	enum:LINE_TYPE
+NOVA_MODULES_OBJS	makefile	/^NOVA_MODULES_OBJS = nova_modules.o read_symbols.o modules.o$/;"	m
+New_Calloc	nova_modules.cpp	/^VOID * New_Calloc( CONTEXT *context, AFUNPTR orgFuncptr, size_t nelem, size_t elesize)$/;"	f
+New_Free	nova_modules.cpp	/^VOID New_Free( CONTEXT *context, AFUNPTR orgFuncptr, void *ptr)$/;"	f
+New_Malloc	nova_modules.cpp	/^VOID * New_Malloc( CONTEXT *context, AFUNPTR orgFuncptr, size_t size)$/;"	f
+New_Realloc	nova_modules.cpp	/^VOID * New_Realloc( CONTEXT *context, AFUNPTR orgFuncptr, void *ptr, size_t size)$/;"	f
+NextAddr	addressmap.cpp	/^addr_type AddressTranslator::NextAddr(size_t size) {$/;"	f	class:AddressTranslator
+OFFSET	analyzer.cpp	17;"	d	file:
+OPT	makefile	/^OPT =${COPT} -DPRINT_LOCK -g -DPRINT_FREE$/;"	m
+ParseAtomicSection	analyzer.cpp	/^void ParseAtomicSection(string* str, AtomicSection* atomic_section) {$/;"	f
+Print	addressmap.cpp	/^void AddressMarker::Print() {$/;"	f	class:AddressMarker
+Print	addressmap.cpp	/^void AddressMarkerVectorHandler::Print() {$/;"	f	class:AddressMarkerVectorHandler
+ProcessDummyEnd	nova_modules.cpp	/^VOID ProcessDummyEnd( UINT32 thread_id ) {$/;"	f
+ProcessDummyStart	nova_modules.cpp	/^VOID ProcessDummyStart( UINT32 thread_id ) {$/;"	f
+ProcessLock	nova_modules.cpp	/^VOID ProcessLock(ADDRINT mutex_address, UINT32 thread_id) {$/;"	f
+ProcessUnlock	nova_modules.cpp	/^VOID ProcessUnlock(ADDRINT mutex_address, UINT32 thread_id) {$/;"	f
+READ_SYMBOLS_H	read_symbols.h	2;"	d
+REALLOC	nova_modules.cpp	27;"	d	file:
+RS_DEBUG_PRINT	read_symbols.h	32;"	d
+ReadAtomicSections	filter.cpp	/^void ReadAtomicSections() {$/;"	f
+ReadConfFile	nova_modules.cpp	/^VOID ReadConfFile() {$/;"	f
+RecordSyncVar	nova_modules.cpp	/^VOID RecordSyncVar(ADDRINT sync_address) {$/;"	f
+Report	analyzer.cpp	/^void Report(){$/;"	f
+SanitizeTranslator	addressmap.cpp	/^void AddressMarkerVectorHandler::SanitizeTranslator() {$/;"	f	class:AddressMarkerVectorHandler
+Set	addressmap.cpp	/^void AddressMarker::Set(addr_type start_addr, addr_type end_addr) {$/;"	f	class:AddressMarker
+Set	atomicsection.cpp	/^void AtomicSection::Set(pc_type pc, addr_type write_addr, size_t write_len,$/;"	f	class:AtomicSection
+SetTranslated	module_map.cpp	/^void ModuleInfo::SetTranslated(long long translated_base, long long translated_upper_address) {$/;"	f	class:ModuleInfo
+SetTranslatedModule	module_map.cpp	/^void ModuleTranslator::SetTranslatedModule(long long base, long long upper_address, string *name) {$/;"	f	class:ModuleTranslator
+StringEq	module_map.h	/^class StringEq {$/;"	c
+StringHash	module_map.h	/^class StringHash {$/;"	c
+ThreadBegin	nova_modules.cpp	/^VOID ThreadBegin(THREADID thread_id, CONTEXT *ctxt, INT32 flags, VOID *v)$/;"	f
+ThreadEnd	nova_modules.cpp	/^VOID ThreadEnd(THREADID thread_id, const CONTEXT *ctxt, INT32 code, VOID *v)$/;"	f
+Translate	addressmap.cpp	/^addr_type AddressMarker::Translate(addr_type address, access_count_type access_counter) {$/;"	f	class:AddressMarker
+TranslatorMap	addressmap.h	/^typedef map<const access_count_type, addr_type, AccessCountLt> TranslatorMap;$/;"	t
+UNLOCK	nova_modules.cpp	30;"	d	file:
+UNLOCK_TYPE	instruction.h	/^enum LINE_TYPE {EOF_TYPE, LOCK_TYPE, UNLOCK_TYPE, NORMAL_TYPE, FREE_TYPE};$/;"	e	enum:LINE_TYPE
+UpdateCounter	analyzer.cpp	/^void UpdateCounter( AtomicSection* atomic_section, int thread_id ){$/;"	f
+Usage	nova_modules.cpp	/^INT32 Usage() {$/;"	f
+WriteSymbols	nova_modules.cpp	/^VOID WriteSymbols() {$/;"	f
+__META_DATA__	meta_data.h	2;"	d
+_access_counter	atomicsection.h	/^  access_count_type _access_counter;$/;"	m	class:AtomicSection
+_address_marker_vector	addressmap.h	/^  AddressMarkerVector _address_marker_vector; $/;"	m	class:AddressMarkerVectorHandler
+_base	modules.h	/^  ADDRINT _base;$/;"	m	class:Module
+_end_addr	addressmap.h	/^  addr_type _start_addr, _end_addr;$/;"	m	class:AddressMarker
+_id	modules.h	/^  UINT32 _id;  $/;"	m	class:Module
+_ins	atomicsection.h	/^  pc_type _ins;$/;"	m	class:AtomicSection
+_life_range_vector	addressmap.h	/^  LifeRangeVector _life_range_vector;$/;"	m	class:AddressMarker
+_line_no	atomicsection.h	/^  line_no_type _line_no;$/;"	m	class:AtomicSection
+_malloc_vector	addressmap.h	/^  vector<pair<addr_type, size_t> *> _malloc_vector;$/;"	m	class:AddressMarkerVectorHandler
+_mmap_by_base	module_map.h	/^  ModuleMapByBase _mmap_by_base;$/;"	m	class:ModuleTranslator
+_mmap_by_name	module_map.h	/^  ModuleMapByName _mmap_by_name;$/;"	m	class:ModuleTranslator
+_name	module_map.h	/^  string _name;$/;"	m	class:ModuleInfo
+_name	modules.h	/^  const string _name;$/;"	m	class:Module
+_next	addressmap.h	/^  addr_type _next;$/;"	m	class:AddressTranslator
+_old_base	module_map.h	/^  long long _old_base;$/;"	m	class:ModuleInfo
+_old_upper_address	module_map.h	/^  long long _old_upper_address;$/;"	m	class:ModuleInfo
+_read_addr1	atomicsection.h	/^  addr_type _read_addr1;$/;"	m	class:AtomicSection
+_read_addr2	atomicsection.h	/^  addr_type _read_addr2;$/;"	m	class:AtomicSection
+_read_set	atomicsection.h	/^  HashAddressSet _read_set, _write_set;$/;"	m	class:AtomicSection
+_safety_margin	addressmap.h	/^  addr_type _safety_margin;$/;"	m	class:AddressTranslator
+_start_addr	addressmap.h	/^  addr_type _start_addr, _end_addr;$/;"	m	class:AddressMarker
+_translated_base	module_map.h	/^  long long _translated_base;$/;"	m	class:ModuleInfo
+_translated_upper_address	module_map.h	/^  long long _translated_upper_address;$/;"	m	class:ModuleInfo
+_upper_address	modules.h	/^  ADDRINT _upper_address;$/;"	m	class:Module
+_write_addr	atomicsection.h	/^  addr_type _write_addr;$/;"	m	class:AtomicSection
+_write_set	atomicsection.h	/^  HashAddressSet _read_set, _write_set;$/;"	m	class:AtomicSection
+access_count	meta_data.h	/^	access_count_type access_count;$/;"	m	struct:meta_data
+access_count_type	instruction.h	/^typedef unsigned long access_count_type;$/;"	t
+active_threads	nova_modules.cpp	/^volatile INT16 active_threads = 1;$/;"	v
+addr	read_symbols.h	/^  tp_addr addr;$/;"	m	struct:__anon1
+addr_type	instruction.h	/^typedef unsigned long addr_type;$/;"	t
+address_translator	addressmap.cpp	/^AddressTranslator AddressMarker::address_translator = AddressTranslator();$/;"	m	class:AddressMarker	file:
+address_translator	addressmap.h	/^  static AddressTranslator address_translator;$/;"	m	class:AddressMarker
+amv_handler	filter.cpp	/^AddressMarkerVectorHandler amv_handler;$/;"	v
+compar_addr	read_symbols.cpp	/^int compar_addr(const void *n0, const void *n1){$/;"	f
+conf_file	analyzer.cpp	/^fstream conf_file, **in_file, report_file;$/;"	v
+conf_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+conf_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+dbg_flag	filter.cpp	/^bool dbg_flag = false;$/;"	v
+dummy_check	nova_modules.cpp	/^bool dummy_check = false;$/;"	v
+excluded_lib_names	nova_modules.cpp	/^const CHAR *excluded_lib_names[] = { "lib64",$/;"	v
+false	read_symbols.h	15;"	d
+false	read_symbols.h	17;"	d
+find_nth	instruction.cpp	/^size_t find_nth(const string& s, char c, int n) {$/;"	f
+flag_dummy_start	nova_modules.cpp	/^static int *flag_dummy_start;$/;"	v	file:
+fname	nova_modules.cpp	/^static	char *fname = NULL;$/;"	v	file:
+free_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+free_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+free_lock	nova_modules.cpp	/^PIN_LOCK malloc_lock, free_lock;$/;"	v
+has_read2	nova_modules.cpp	/^BOOL *has_read2;$/;"	v
+in_file	analyzer.cpp	/^fstream conf_file, **in_file, report_file;$/;"	v
+in_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+info_table	analyzer.cpp	/^map<addr_type, MetaData> info_table; \/* added by mejbah :: key = read ins addr, value = Meta Data*\/$/;"	v
+ins_lock	nova_modules.cpp	/^PIN_LOCK ins_lock;$/;"	v
+is_read	nova_modules.cpp	/^BOOL  *is_read;$/;"	v
+is_write	nova_modules.cpp	/^BOOL *is_write;$/;"	v
+last_write_addr	meta_data.h	/^	pc_type last_write_addr; \/* last write PC *\/$/;"	m	struct:meta_data
+last_write_tid	meta_data.h	/^	int last_write_tid;$/;"	m	struct:meta_data
+line_no_type	instruction.h	/^typedef long line_no_type;$/;"	t
+m_translator	filter.cpp	/^ModuleTranslator m_translator;$/;"	v
+main	analyzer.cpp	/^int main(int argc, char* args[]) {$/;"	f
+main	filter.cpp	/^int main(int argc, char* args[]) {$/;"	f
+main	nova_modules.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+malloc_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+malloc_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+malloc_lock	nova_modules.cpp	/^PIN_LOCK malloc_lock, free_lock;$/;"	v
+mem_access_counter	nova_modules.cpp	/^volatile MEM_ACCESS_STAT mem_access_counter = 1;$/;"	v
+meta_data	meta_data.h	/^typedef struct meta_data$/;"	s
+modules	nova_modules.cpp	/^Module *modules[MAX_MODULES];$/;"	v
+modules_file	nova_modules.cpp	/^        others_file, modules_file;$/;"	v
+n_excluded_lib_names	nova_modules.cpp	/^const UINT16 n_excluded_lib_names = 16;                                   $/;"	v
+n_nodes	nova_modules.cpp	/^static unsigned int n_nodes = 0;$/;"	v	file:
+nodes	nova_modules.cpp	/^static tp_node *nodes = NULL;$/;"	v	file:
+old_modules_file	filter.cpp	/^        old_modules_file, translated_modules_file;$/;"	v
+operator ()	instruction.cpp	/^bool AccessCountLt::operator()(const access_count_type a, const access_count_type b)const {$/;"	f	class:AccessCountLt
+operator ()	instruction.cpp	/^bool AddrEq::operator()(const addr_type a, const addr_type b) const {$/;"	f	class:AddrEq
+operator ()	instruction.cpp	/^bool AddrLt::operator()(const addr_type a, const addr_type b)const {$/;"	f	class:AddrLt
+operator ()	module_map.cpp	/^bool LongLongLt::operator()(long long a, long long b) const {$/;"	f	class:LongLongLt
+operator ()	module_map.cpp	/^bool StringEq::operator()(const string *str1, const string *str2) const {$/;"	f	class:StringEq
+operator ()	module_map.cpp	/^size_t StringHash::operator() (const string *str) const {$/;"	f	class:StringHash
+operator ()	nova_modules.cpp	/^  bool operator() (const ADDRINT a, const ADDRINT b) const {$/;"	f	class:ADDRINTEq
+operator <<	atomicsection.cpp	/^ostream& operator << (ostream& os,$/;"	f
+operator =	atomicsection.cpp	/^AtomicSection& AtomicSection::operator= (AtomicSection& rhs) {$/;"	f	class:AtomicSection
+others_file	nova_modules.cpp	/^        others_file, modules_file;$/;"	v
+out_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+out_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+pair_counter	analyzer.cpp	/^unsigned int **pair_counter;$/;"	v
+pc_type	instruction.h	/^typedef unsigned long pc_type;$/;"	t
+raddr	nova_modules.cpp	/^ADDRINT *raddr;$/;"	v
+raddr2	nova_modules.cpp	/^ADDRINT *raddr2;$/;"	v
+report_file	analyzer.cpp	/^fstream conf_file, **in_file, report_file;$/;"	v
+rlen	nova_modules.cpp	/^UINT32 *rlen;$/;"	v
+rs_addr_in_nodes	read_symbols.cpp	/^rs_addr_in_nodes(const tp_node *nodes, const unsigned int n_nodes,$/;"	f
+rs_get_addr_from_name	read_symbols.cpp	/^rs_get_addr_from_name(const tp_node *nodes, const unsigned int n_nodes,$/;"	f
+rs_get_executable	read_symbols.cpp	/^rs_get_executable(int argc, char * argv[])$/;"	f
+rs_get_name_from_addr	read_symbols.cpp	/^rs_get_name_from_addr(const tp_node *nodes, const unsigned int n_nodes,$/;"	f
+rs_get_source_and_line	read_symbols.cpp	/^rs_get_source_and_line(tp_addr PC, char *file_name)$/;"	f
+rs_read_symbol_table	read_symbols.cpp	/^rs_read_symbol_table(const char *file_name, tp_node **ptr_node, unsigned int *n_nodes)$/;"	f
+size	read_symbols.h	/^  unsigned int size;$/;"	m	struct:__anon1
+start_profile	nova_modules.cpp	/^volatile INT16 start_profile = 0;$/;"	v
+sym_file	filter.cpp	/^fstream conf_file, **in_file, **out_file, sym_file, malloc_file, free_file,$/;"	v
+symbol_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+sync_file	nova_modules.cpp	/^fstream **out_file, conf_file, sync_file, malloc_file, free_file, symbol_file, $/;"	v
+total_threads	analyzer.cpp	/^int total_threads;$/;"	v
+total_threads	filter.cpp	/^int total_threads;$/;"	v
+total_threads	nova_modules.cpp	/^INT32 total_threads;$/;"	v
+tp_addr	read_symbols.h	/^typedef unsigned long tp_addr;$/;"	t
+tp_node	read_symbols.h	/^} tp_node;$/;"	t	typeref:struct:__anon1
+translated_modules_file	filter.cpp	/^        old_modules_file, translated_modules_file;$/;"	v
+true	read_symbols.h	20;"	d
+true	read_symbols.h	22;"	d
+var_name	read_symbols.h	/^	char var_name[MAX_NAME_VARIABLE];$/;"	m	struct:__anon1
+waddr	nova_modules.cpp	/^ADDRINT *waddr;$/;"	v
+wlen	nova_modules.cpp	/^UINT32 *wlen;$/;"	v
+~AddressMarker	addressmap.cpp	/^AddressMarker::~AddressMarker() {$/;"	f	class:AddressMarker
+~AddressMarkerVectorHandler	addressmap.cpp	/^AddressMarkerVectorHandler::~AddressMarkerVectorHandler() {$/;"	f	class:AddressMarkerVectorHandler
+~AtomicSection	atomicsection.cpp	/^AtomicSection::~AtomicSection() {$/;"	f	class:AtomicSection
+~ModuleTranslator	module_map.cpp	/^ModuleTranslator::~ModuleTranslator() {$/;"	f	class:ModuleTranslator

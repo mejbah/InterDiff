@@ -1,0 +1,3 @@
+Pin 2.10 kit 45445
+A: nova_modules.cpp:ThreadBegin:ThreadBegin:797: assertion failed: thread_id < (UINT32)total_threads
+

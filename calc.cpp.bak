@@ -1,0 +1,78 @@
+#include<iostream>
+#include<fstream>
+#include<sstream>
+#include<math.h>
+#include<string>
+#include<assert.h>
+using namespace std;
+#define BUF_LEN 100
+
+int total_threads;
+fstream conf_file;
+int main( int argc, char **args ) {
+  if(argc != 5 ) {
+    cout<<"Usage: rundiff data_dir execno execno conf_file" << endl;
+    return 1;
+  }
+  conf_file.open(args[4], fstream::in);
+  if( !conf_file.is_open()) {
+    cout << args[4] <<" conf_file file not found" << endl;
+    return 1;
+  }
+  string str;
+  getline(conf_file, str);
+  stringstream ss(str);
+  ss >> total_threads;
+  cout << "total threads " << total_threads << endl;
+
+  int no_exec1; 
+  string exec1_argv(args[2]);
+  stringstream ss1(exec1_argv);
+  ss1 >> no_exec1;
+
+  int no_exec2; 
+  string exec2_argv(args[3]);
+  stringstream ss2(exec2_argv);
+  ss2 >> no_exec2;
+  
+  
+  char src_file_name[BUF_LEN];
+  char dest_file_name[BUF_LEN];
+
+  sprintf( src_file_name, "%s/counter.report.%d", args[1], no_exec1);
+  sprintf( dest_file_name, "%s/counter.report.%d", args[1], no_exec2);
+
+  fstream src_file, dest_file;
+  src_file.open( src_file_name, fstream::in );
+  if( !src_file.is_open() ){
+    cout<< src_file_name  << " not found" << endl;
+    return 1;
+  } 
+  dest_file.open( dest_file_name, fstream::in);
+  if( !dest_file.is_open() ){
+    cout<< dest_file_name  << " not found" << endl;
+    return 1;
+  }
+  int dist_square_sum = 0;
+  int active_pairs = 0;
+  for( int i=0; i< total_threads*total_threads; i++ ){
+    string src_str, dest_str;
+    getline(src_file, src_str);
+    getline(dest_file, dest_str);
+    stringstream src_ss(src_str);
+    stringstream dest_ss(dest_str);
+    int src_val, dest_val;
+    src_ss>> src_val;
+    dest_ss>>dest_val;
+    if(src_val == 0) {
+      assert( dest_val == 0 );
+      continue;
+    }
+    active_pairs++;
+    cout << (src_val - dest_val) << endl;
+    dist_square_sum += ((src_val - dest_val)*(src_val - dest_val));
+  }
+  cout << "Active thread pairs " << active_pairs << endl; 
+  double result =  (sqrt(dist_square_sum))/(double)active_pairs;
+  cout << "RESULT " << result << endl;
+}

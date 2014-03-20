@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# should not submit job for more than input size for one application
+APPS=( canneal )
+for (( i = 0; i < ${#APPS[@]}; i++))
+do
+	APP=${APPS[$i]}
+	qsub -N ${APP}-profile -o ${APP}.log -j y -cwd ./run_parsec.sh $APP small 10
+done
+
+
+
+
+
