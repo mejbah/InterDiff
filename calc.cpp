@@ -58,6 +58,8 @@ int main( int argc, char **args ) {
       }   
       int dist_square_sum = 0;
       int active_pairs = 0;
+      int src_total=0;
+      int dest_total=0;
       for( int k=0; k< total_threads*total_threads; k++ ){
         string src_str, dest_str;
         getline(src_file, src_str);
@@ -67,20 +69,25 @@ int main( int argc, char **args ) {
         int src_val, dest_val;
         src_ss>> src_val;
         dest_ss>>dest_val;
-        if(src_val == 0) {
-          assert( dest_val == 0 );
-      //    continue;
+        src_total +=src_val;
+        dest_total +=dest_val;
+        if(src_val == 0 && dest_val == 0) {
+      //    assert( dest_val == 0 );
+          continue;
         }
+	
         else {
           active_pairs++;
        //   cout << (src_val - dest_val) << endl;
           dist_square_sum += ((src_val - dest_val)*(src_val - dest_val));
         }
       }
-      double result =  (sqrt(dist_square_sum))/(double)active_pairs;
-      cout << "RESULT ( " << i << ","<< j<< " ) :: " << result << endl; 
+      assert(src_total == dest_total);
+      //double result =  (sqrt(dist_square_sum))/(double)active_pairs;
+      double result =  ((sqrt(dist_square_sum))/(double)src_total) * 100;
+      cout << "VAREXEC ( " << i << ","<< j<< " ) :: " << result << "%" << endl; 
       	
-      //cout << "-- Active thread pairs " << active_pairs << endl; 
+      //cout << "-- Active thread pairs " << active_pairs << " total shared load " << src_total << endl; 
 
 
       src_file.close();
