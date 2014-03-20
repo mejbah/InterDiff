@@ -6,3 +6,9 @@ RUN: e.g PARSEC programs
 1. In conf folder create config file where first line contains the number of threads
 2. set PIN_HOME & BENCHMARK_DIR & BIN_DIR in run_parsec.sh
 3. run_parsec.sh  program.name small/test total.executions.no [config.file.name]
+
+OUTPUT: 
+- uses standard output
+- Average(per thread) estimate of change in RAW dependence due to change in thread interleaving between two execution [i,j]
+where i,j are execution numbers assined uniquely for distinct execution.
+shown as RESULT (i,j) in output
