@@ -1,3 +1,8 @@
+This tool quantifies changes of thread interleaving in different execution of a multithreaded program.
+-Run a program for N times in this tool,
+-It estimates the difference of thread interleaving between each pair of executions,
+-Estimation is based on differences in the total number of RAW dependences between pair of threads.
+
 Make:
 1. Set PIN_HOME, PIN_KIT in makefile.gnu.config
 
