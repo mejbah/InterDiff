@@ -1,13 +1,15 @@
 #!/bin/bash
 # $1 - program_name
 # $2 - input_size - test , small
-# $3 - Config file
-# $4 - no of ReExecution 
+# $3 - no of ReExecution 
+# $4 - [Config file]
+
 BENCHMARK_DIR=/home/mejbah/benchmark/parsec-2.1_pinsesc/pkgs
 BIN_DIR=/inst/amd64-linux.gcc-pthreads/bin/
 PIN_HOME=/home/mejbah/pintool/pin-2.10-45467-gcc.3.4.6-ia32_intel64-linux
 CONF_NAME=$4
 NO_EXEC=$3
+
 NTHREADS=4
 
 mkdir -p ./data
@@ -148,16 +150,16 @@ do
 	if  [ $i -eq 1 ]
 	then
 	./filter ./conf/${CONF_NAME} ./data/${APP_NAME}/run$i/${APP_NAME}.out ./data/${APP_NAME}/run$i/${APP_NAME}.out.sym ./data/${APP_NAME}/run$i/${APP_NAME}.out.malloc ./data/${APP_NAME}/run$i/${APP_NAME}.out.free ./data/${APP_NAME}/run$i/${APP_NAME}.out.modules ./data/${APP_NAME}/run$i/${APP_NAME}.out.modules ./data/${APP_NAME}/run$i/${APP_NAME}.out.compact
-	mv ./data/${APP_NAME}/run$i/FFT.out.modules ./data/${APP_NAME}/FFT.out.modules.ref
+	mv ./data/${APP_NAME}/run$i/$APP_NAME.out.modules ./data/${APP_NAME}/$APP_NAME.out.modules.ref
 	else
-	./filter ./conf/${CONF_NAME} ./data/${APP_NAME}/run$i/${APP_NAME}.out ./data/${APP_NAME}/run$i/${APP_NAME}.out.sym ./data/${APP_NAME}/run$i/${APP_NAME}.out.malloc ./data/${APP_NAME}/run$i/${APP_NAME}.out.free ./data/${APP_NAME}/run$i/${APP_NAME}.out.modules ./data/${APP_NAME}/run$i/${APP_NAME}.out.modules.ref ./data/${APP_NAME}/run$i/${APP_NAME}.out.compact
+	./filter ./conf/${CONF_NAME} ./data/${APP_NAME}/run$i/${APP_NAME}.out ./data/${APP_NAME}/run$i/${APP_NAME}.out.sym ./data/${APP_NAME}/run$i/${APP_NAME}.out.malloc ./data/${APP_NAME}/run$i/${APP_NAME}.out.free ./data/${APP_NAME}/run$i/${APP_NAME}.out.modules ./data/${APP_NAME}/${APP_NAME}.out.modules.ref ./data/${APP_NAME}/run$i/${APP_NAME}.out.compact
 	fi
 	echo "Analyzer start... "
 	./analyzer ./conf/${CONF_NAME} ./data/${APP_NAME}/run$i/${APP_NAME}.out.compact ./data/${APP_NAME} $i 	
 	echo "Analyzer finish..."
 done  
   
-echo calculating interleaving change for ${NO_EXEC} executions of ${APP_NAME} ...
+echo Calculating interleaving change for ${NO_EXEC} executions of ${APP_NAME} ...
 #./calc ./data/${APP_NAME} 1 2 ./conf/${CONF_NAME}
-echo ./calc ./data/blackscholes $NO_EXEC ./conf/${CONF_NAME}
-./calc ./data/blackscholes $NO_EXEC ./conf/${CONF_NAME}
+echo ./calc ./data/$APP_NAME 1 $NO_EXEC ./conf/${CONF_NAME}
+./calc ./data/$APP_NAME 1 $NO_EXEC ./conf/${CONF_NAME}
